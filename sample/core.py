@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from . import funcoes
 
-
 def srtradutor():
     while True:
         frase = funcoes.ouvirFrase()

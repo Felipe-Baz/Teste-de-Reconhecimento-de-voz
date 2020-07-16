@@ -36,6 +36,7 @@ def ouvirLingua():
     Função para retornar a lingua obtida pelo programa atravez da lib speech_recognition
     :return: Retornara a lingua obtida pelo reconhecimento de voz ou -1 se houver algum erro
   '''
+
   # Habilita o microfone para ouvir o usuario
   ouvinte = sr.Recognizer()
   with sr.Microphone() as source:
