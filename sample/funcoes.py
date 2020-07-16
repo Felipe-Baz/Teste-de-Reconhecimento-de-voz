@@ -1,9 +1,9 @@
 # importa a Lib que fará o reconhecimento de voz
 import speech_recognition as sr
+# importa a Lib que fará a tradução dos textos
+from googletrans import Translator
 
 # Funcao responsavel por ouvir e reconhecer a fala
-
-
 def ouvirFrase():
   '''
     Função para retornar a frase obtida pelo programa atravez da lib speech_recognition
@@ -29,7 +29,7 @@ def ouvirFrase():
       return -1
   return frase
 
-
+# Função que fará o reconhecimento da lingua desejada
 def ouvirLingua():
   '''
     Função para retornar a lingua obtida pelo programa atravez da lib speech_recognition
@@ -56,3 +56,10 @@ def ouvirLingua():
       return -1
   if frase == 'português':
     return 'pt-br'
+
+
+def traducao(frase, lingua):
+  tradutor = Translator()
+  linguaOrigem = tradutor.detect(frase)
+  fraseTraduzida = tradutor.translate(frase, dest=lingua)
+  print(f'A sua frase em {linguaOrigem}, foi traduzida para {lingua}. \n {frase} -> {fraseTraduzida}')
