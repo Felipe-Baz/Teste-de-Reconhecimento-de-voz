@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-from .funcoes import ouvirFrase, ouvirLingua, traducao
+from . import funcoes
 
 
-def srTradutor():
+def srtradutor():
     while True:
-        frase = ouvirFrase()
+        frase = funcoes.ouvirFrase()
         if frase != -1:
             resposta = str(input('A frase está correta? [S ou N]: \n')).strip().upper()
             if resposta[0] == 'S':
                 break
-        lingua = ouvirLingua()
+        lingua = funcoes.ouvirLingua()
         if lingua != -1:
             resposta = str(
                 input('A frase está correta? [S ou N]: \n')).strip().upper()
             if resposta[0] == 'S':
                 break
-    traducao(frase, lingua)
+    funcoes.traducao(frase, lingua)

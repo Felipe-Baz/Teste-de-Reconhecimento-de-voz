@@ -3,6 +3,7 @@ import speech_recognition as sr
 # importa a Lib que fará a tradução dos textos
 from googletrans import Translator
 
+
 # Funcao responsavel por ouvir e reconhecer a fala
 def ouvirFrase():
   '''

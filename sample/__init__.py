@@ -1,2 +1,2 @@
-from .core import srTradutor
-srTradutor()
+from . import core
+core.srtradutor()
